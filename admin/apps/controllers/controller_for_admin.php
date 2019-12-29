@@ -40,6 +40,7 @@ class Controller_For_Admin extends Controller
     private function access(){
         $arr = Class_Test_Access::test($this->id_admin, $this->hash_key_admin);
         if(!$arr) return false;
+        //
         $this->name_admin  = $arr['name'];
         $this->email_admin = $arr['email'];
         return true;

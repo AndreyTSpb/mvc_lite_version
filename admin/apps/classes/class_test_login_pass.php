@@ -24,8 +24,8 @@ class Class_Test_Login_Pass
 
         if(!$obj->update()) return false;
 
-        setcookie("id_admin", $obj->id, time() + 3600*24, "/admin/");
-        setcookie("hash_key_admin", $hash, time() + 3600*24, "/admin/");
+        setcookie("id_admin", $obj->id, time() + 3600*24, "/admin");
+        setcookie("hash_key_admin", $hash, time() + 3600*24, "/admin");
         return true;
     }
 
