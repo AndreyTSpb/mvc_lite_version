@@ -5,6 +5,7 @@ $(document).ready(function () {
      */
 
     if($("div.new_model").length > 0){
+        console.log(window.location.href);
         /**
          * авто-запонение названия таблицы при клике по ее названию в  new_model
          */
@@ -20,7 +21,7 @@ $(document).ready(function () {
             var model_path = $("input[name=model_path]").val();
 
             $.ajax({
-                url: "new_model/ajax_preview",
+                url: window.location.href + "/ajax_preview",
                 type: "POST",
                 data: {
                     preview: true,
@@ -47,7 +48,7 @@ $(document).ready(function () {
          */
         test_create_files = function(url, file){
             $.ajax({
-                url: 'new_mvc/ajax_file_exist',
+                url: window.location.href + '/ajax_file_exist',
                 type:'post',
                 data: {url: url, name: file},
                 error: function()

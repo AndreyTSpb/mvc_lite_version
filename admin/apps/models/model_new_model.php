@@ -12,14 +12,14 @@ class Model_New_Model extends Model
         global $link;
         $sql = $link->query("SHOW TABLES FROM ".DB_NAME.";");
 
-        $res = $sql->fetchAll(PDO::FETCH_ASSOC);
+        $res = $sql->fetch_assoc();
 
         if(!$res){
             return false;
         }
         $arr = array();
         foreach ($res as $table_name){
-            $arr[] = $table_name['Tables_in_farm'];
+            $arr[] = $table_name;
         }
         return $arr;
     }

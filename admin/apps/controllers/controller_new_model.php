@@ -17,7 +17,7 @@ class Controller_New_Model extends Controller
     function action_index(){
         $data['title']  = "Создаем новый файл модели для таблицы";
         $data['tables'] = $this->model->get_tables_name();
-        $this->view->generate('new_model_view.php', 'layout.php', $data);
+        $this->view->generate('new_model_view.php', 'index.php', $data);
     }
 
     /**
@@ -29,10 +29,10 @@ class Controller_New_Model extends Controller
             $route_for_save = $_POST['model_path'];
             $obj = new Model_Create_Model($table_name, $route_for_save);
             if (!$obj->result) {
-                header("Location: /admin/new_model");
+                header("Location: ".DOCUMENT_ROOT."/new_model");
                 exit();
             }
-            header("Location: /admin/new_model");
+            header("Location: ".DOCUMENT_ROOT."/new_model");
             exit();
         }
     }
