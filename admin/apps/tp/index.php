@@ -65,7 +65,6 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="<?=DOCUMENT_STATIC?>/js/jquery-3.4.1.min.js" ></script>
 <script>window.jQuery || document.write('<script src="<?=DOCUMENT_STATIC?>/js/jquery-slim.min.js"><\/script>')</script>
-<script src="<?=DOCUMENT_STATIC?>/js/popper.min.js"></script>
 <script src="<?=DOCUMENT_STATIC?>/js/bootstrap.min.js"></script>
 <script src="<?=DOCUMENT_STATIC?>/js/custom.js"></script>
 </body>

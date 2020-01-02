@@ -46,4 +46,19 @@ class Controller_New_Model extends Controller
             exit();
         }
     }
+
+    /**
+     * проверка существует ли файл
+     */
+    function action_ajax_file_exist(){
+        $url = $_POST['url'];
+        $file = $_POST['name'];
+        if (file_exists($url."/".$file)) {
+            echo 1;
+            exit();
+        } else {
+            echo 0;
+            exit();
+        }
+    }
 }

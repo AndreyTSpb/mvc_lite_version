@@ -29,8 +29,8 @@ class Model_Create_Model
         if(!$table_name) {echo "no table name"; return false;}
 
         $sql = "SELECT * FROM $table_name LIMIT 0";
-        echo $sql;
-        exit();
+        //echo $sql;
+        //exit();
 
         $rs = $dbObject->query($sql);
 
@@ -51,8 +51,8 @@ class Model_Create_Model
         $name_files = "model_".$table_name;
 
 
-        echo $name_files;
-        exit;
+        //echo $name_files;
+        //exit;
         /**
          * шапка для файла с описанием класса
          */
